@@ -2,9 +2,9 @@
 /* 
 Plugin Name: Font Burner
 Plugin URI: http://www.fontburner.com/the-font-burner-wordpress-plugin/
-Version: v0.1
+Version: v0.2
 Author: <a href="http://adrian3.com/">Adrian3</a>
-Description: The Font Burner Plugin allows you to easily add <a href="http://fontburner.com/">Font Burner</a> Fonts to your Wordpress theme.
+Description: The Font Burner Plugin allows you to easily add <a href="http://fontburner.com/">Font Burner</a> Fonts to your site through Wordpress.
 
 */
 
@@ -13,22 +13,22 @@ Description: The Font Burner Plugin allows you to easily add <a href="http://fon
 //Updated and added additional options by Jeremy Clark http://clarktech.no-ip.com/
 //Hacked and Frankensteined into a plugin by Adrian Hanft http://adrian3.com/
 
-$themename = "Font Burner";
-$shortname = "fontburner";
-$options = array (
+$fontburner_themename = "Font Burner";
+$fontburner_shortname = "fontburner";
+$fontburner_options = array (
     array(  "name" => "Do you want links to be underlined?",
-            "id" => $shortname."_underline",
+            "id" => $fontburner_shortname."_underline",
             "type" => "radio",
             "std" => "none",
             "options" => array("underline", "none")),
 
 	array(  "name" => "Font Burner Code: <br />(found at fontburner.com)",
-		            "id" => $shortname."_font",
+		            "id" => $fontburner_shortname."_font",
 		            "std" => "fontin_sans_bold",
 		            "type" => "text"),
 
     array(  "name" => "Font Color:<br />(hexadecimal without the \"#\")",
-            "id" => $shortname."_color",
+            "id" => $fontburner_shortname."_color",
             "std" => "000000",
             "type" => "text"),
 
@@ -37,7 +37,7 @@ $options = array (
 only. If you mess this up,<br />
 click \"reset\" below.<br />
 to restore defaults.)",
-		            "id" => $shortname."_css",
+		            "id" => $fontburner_shortname."_css",
 		            "std" => ".sIFR-active h1 {
 	  line-height: 1.4em;
 	  font-size: 24px;
@@ -57,39 +57,39 @@ to restore defaults.)",
 		            "type" => "textarea"),
   
     array(  "name" => "Turn off h1:",
-            "id" => $shortname."_h1",
+            "id" => $fontburner_shortname."_h1",
             "type" => "select",
             "std" => "h1",
             "options" => array("h1", "off")),
     array(  "name" => "Turn off h2:",
-            "id" => $shortname."_h2",
+            "id" => $fontburner_shortname."_h2",
             "type" => "select",
             "std" => "h2",
             "options" => array("h2", "off")),
     array(  "name" => "Turn off h3:",
-            "id" => $shortname."_h3",
+            "id" => $fontburner_shortname."_h3",
             "type" => "select",
             "std" => "h3",
             "options" => array("h3", "off")),
     array(  "name" => "Turn off h4:",
-            "id" => $shortname."_h4",
+            "id" => $fontburner_shortname."_h4",
             "type" => "select",
             "std" => "off",
             "options" => array("h4", "off"))
 );
 
-function mytheme_add_admin() {
+function myfontburner_add_admin() {
 
-    global $themename, $shortname, $options;
+    global $fontburner_themename, $fontburner_shortname, $fontburner_options;
 
     if ( $_GET['page'] == basename(__FILE__) ) {
     
         if ( 'save' == $_REQUEST['action'] ) {
 
-                foreach ($options as $value) {
+                foreach ($fontburner_options as $value) {
                     update_option( $value['id'], $_REQUEST[ $value['id'] ] ); }
 
-                foreach ($options as $value) {
+                foreach ($fontburner_options as $value) {
                     if( isset( $_REQUEST[ $value['id'] ] ) ) { update_option( $value['id'], $_REQUEST[ $value['id'] ]  ); } else { delete_option( $value['id'] ); } }
 
                 header("Location: options-general.php?page=font_burner.php&saved=true");
@@ -97,7 +97,7 @@ function mytheme_add_admin() {
 
         } else if( 'reset' == $_REQUEST['action'] ) {
 
-            foreach ($options as $value) {
+            foreach ($fontburner_options as $value) {
                 delete_option( $value['id'] ); 
                 update_option( $value['id'], $value['std'] );}
 
@@ -107,14 +107,14 @@ function mytheme_add_admin() {
         }
     }
 
-add_options_page($themename." Options", "Font Burner Options", 'edit_themes', basename(__FILE__), 'mytheme_admin');
+add_options_page($fontburner_themename." Options", "Font Burner", 'edit_themes', basename(__FILE__), 'myfontburner_admin');
 
 }
 
 
 function addFontburner() {
-	global $options;
-	foreach ($options as $value) {
+	global $fontburner_options;
+	foreach ($fontburner_options as $value) {
 	    if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } 
 	      else { $$value['id'] = get_settings( $value['id'] ); } 
 	}
@@ -227,12 +227,12 @@ echo $fontburner_css;
 	
 	
 }
-function mytheme_admin() {
+function myfontburner_admin() {
 
-    global $themename, $shortname, $options;
+    global $fontburner_themename, $fontburner_shortname, $fontburner_options;
 
-    if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings saved.</strong></p></div>';
-    if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
+    if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$fontburner_themename.' settings saved.</strong></p></div>';
+    if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$fontburner_themename.' settings reset.</strong></p></div>';
     
 ?>
 <div class="wrap">
@@ -245,7 +245,7 @@ function mytheme_admin() {
 
 <table class="optiontable">
 
-<?php foreach ($options as $value) { 
+<?php foreach ($fontburner_options as $value) { 
     
 if ($value['type'] == "text") { ?>
         
@@ -311,5 +311,5 @@ if ($value['type'] == "text") { ?>
 <iframe src="../?preview=true" width="100%" height="600" ></iframe>
 <?php
 }
-add_action('admin_menu', 'mytheme_add_admin');
+add_action('admin_menu', 'myfontburner_add_admin');
 add_action('wp_head', 'addFontburner'); ?>

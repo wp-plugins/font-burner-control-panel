@@ -50,26 +50,3 @@ sIFR Credits:
   margin-left: 42px;
   z-index: 0;
 }
-
-/*---- Header styling ---*/
-.sIFR-active h1 {
-  visibility: hidden;
-  font-family: Verdana;
-  line-height: 1.4em;
-
-  font-size: 24px;
-}
-.sIFR-active h2 {
-  visibility: hidden;
-  font-family: Verdana;
-  line-height: 1.3em;
-
-  font-size: 18px;
-}
-.sIFR-active h3 {
-  visibility: hidden;
-  font-family: Verdana;
-  line-height: 1.2em;
-
-  font-size: 14px;
-}
