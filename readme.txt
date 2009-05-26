@@ -6,7 +6,7 @@ Requires at least: 2.0.2
 Tested up to: 2.71
 Stable tag: trunk
 
-The Font Burner Plugin allows you to easily add Font Burner Fonts to your Wordpress theme.
+The Font Burner Plugin allows you to easily add Font Burner Fonts to your Wordpress theme. 
 
 == Description ==
 The Font Burner Plugin allows you to easily add <a href="http://www.fontburner.com/the-font-burner-wordpress-plugin/">Font Burner</a> Fonts to your Wordpress theme.
