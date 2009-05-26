@@ -11,7 +11,7 @@ The Font Burner Plugin allows you to easily add Font Burner Fonts to your Wordpr
 == Description ==
 The Font Burner Plugin allows you to easily add <a href="http://www.fontburner.com/the-font-burner-wordpress-plugin/">Font Burner</a> Fonts to your Wordpress theme.
 
-Chagnelog:
+Changelog:
 Version 0.3
 - Fixed bug that prevented plugin from being updated automatically through Wordpress. 
 - Added screenshot
