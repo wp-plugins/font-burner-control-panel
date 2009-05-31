@@ -2,7 +2,7 @@
 /* 
 Plugin Name: Font Burner
 Plugin URI: http://www.fontburner.com/the-font-burner-wordpress-plugin/
-Version: v0.3
+Version: v0.4
 Author: <a href="http://adrian3.com/">Adrian3</a>
 Description: The Font Burner Plugin allows you to easily add <a href="http://fontburner.com/">Font Burner</a> Fonts to your site through Wordpress.
 
@@ -128,6 +128,15 @@ function addFontburner() {
 	<script src="';
 	echo get_bloginfo('wpurl'); 
 	echo'/wp-content/plugins/font-burner-control-panel/js/fontburner.js" type="text/javascript"></script> 
+
+<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3989583-8");
+pageTracker._initData();
+pageTracker._setDomainName("none");
+pageTracker._setAllowLinker(true);
+pageTracker._trackPageview();
+</script>
 
 <script type="text/javascript">
 	var ';

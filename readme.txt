@@ -13,6 +13,9 @@ The Font Burner Plugin allows you to easily add <a href="http://www.fontburner.c
 
 Changelog:
 Version 0.3
+- added google analytics code
+
+Version 0.3
 - Fixed bug that prevented plugin from being updated automatically through Wordpress. 
 - Added screenshot
 
