@@ -2,7 +2,7 @@
 /* 
 Plugin Name: Font Burner
 Plugin URI: http://www.fontburner.com/the-font-burner-wordpress-plugin/
-Version: v0.5
+Version: v0.6
 Author: <a href="http://adrian3.com/">Adrian3</a>
 Description: The Font Burner Plugin allows you to easily add <a href="http://fontburner.com/">Font Burner</a> Fonts to your site through Wordpress.
 
@@ -22,10 +22,16 @@ $fontburner_options = array (
 		            "std" => "fontin_sans_bold",
 		            "type" => "text"),
 
-    array(  "name" => "H1 Underline Settings<sup>2</sup>",
+    array(  "name" => "H1 Link Underline Settings<sup>2</sup>",
             "id" => $fontburner_shortname."_h1_underline",
             "type" => "radio",
             "std" => "none",
+            "options" => array("underline", "none")),
+
+    array(  "name" => "H1 Link Underline Hover Settings<sup>2</sup>",
+            "id" => $fontburner_shortname."_h1_hover_underline",
+            "type" => "radio",
+            "std" => "underline",
             "options" => array("underline", "none")),
 
     array(  "name" => "H1 Font Color<sup>3</sup>",
@@ -33,11 +39,22 @@ $fontburner_options = array (
             "std" => "000000",
             "type" => "text"),
 
+    array(  "name" => "H1 Link Color<sup>3</sup>",
+            "id" => $fontburner_shortname."_h1_link_color",
+            "std" => "666666",
+            "type" => "text"),
+
+    array(  "name" => "H1 Link Hover Color<sup>3</sup>",
+            "id" => $fontburner_shortname."_h1_hover_color",
+            "std" => "333333",
+            "type" => "text"),
+
     array(  "name" => "H1 Alignment<sup>4</sup>",
             "id" => $fontburner_shortname."_h1_align",
             "type" => "select",
             "std" => "left",
             "options" => array("right", "left", "center")),
+
     array(  "name" => "Turn off h1<sup>5</sup>",
             "id" => $fontburner_shortname."_h1",
             "type" => "select",
@@ -53,14 +70,30 @@ $fontburner_options = array (
 		            "std" => "cuprum",
 		            "type" => "text"),
 
-    array(  "name" => "H2 Underline Settings<sup>2</sup>",
+    array(  "name" => "H2 Link Underline Settings<sup>2</sup>",
             "id" => $fontburner_shortname."_h2_underline",
             "type" => "radio",
             "std" => "none",
             "options" => array("underline", "none")),
 
+    array(  "name" => "H2 Link Underline Hover Settings<sup>2</sup>",
+            "id" => $fontburner_shortname."_h2_hover_underline",
+            "type" => "radio",
+            "std" => "underline",
+            "options" => array("underline", "none")),
+
     array(  "name" => "H2 Font Color<sup>3</sup>",
             "id" => $fontburner_shortname."_h2_color",
+            "std" => "000000",
+            "type" => "text"),
+
+    array(  "name" => "H2 Link Color<sup>3</sup>",
+            "id" => $fontburner_shortname."_h2_link_color",
+            "std" => "666666",
+            "type" => "text"),
+
+    array(  "name" => "H2 Link Hover Color<sup>3</sup>",
+            "id" => $fontburner_shortname."_h2_hover_color",
             "std" => "333333",
             "type" => "text"),
 
@@ -84,15 +117,31 @@ $fontburner_options = array (
 		            "std" => "candara_bold",
 		            "type" => "text"),
 
-    array(  "name" => "H3 Underline Settings<sup>2</sup>",
+    array(  "name" => "H3 Link Underline Settings<sup>2</sup>",
             "id" => $fontburner_shortname."_h3_underline",
             "type" => "radio",
             "std" => "none",
             "options" => array("underline", "none")),
 
+    array(  "name" => "H3 Link Underline Hover Settings<sup>2</sup>",
+            "id" => $fontburner_shortname."_h3_hover_underline",
+            "type" => "radio",
+            "std" => "underline",
+            "options" => array("underline", "none")),
+
     array(  "name" => "H3 Font Color<sup>3</sup>",
             "id" => $fontburner_shortname."_h3_color",
+            "std" => "000000",
+            "type" => "text"),
+
+    array(  "name" => "H3 Link Color<sup>3</sup>",
+            "id" => $fontburner_shortname."_h3_link_color",
             "std" => "666666",
+            "type" => "text"),
+
+    array(  "name" => "H3 Link Hover Color<sup>3</sup>",
+            "id" => $fontburner_shortname."_h3_hover_color",
+            "std" => "333333",
             "type" => "text"),
 
     array(  "name" => "H3 Alignment<sup>4</sup>",
@@ -115,15 +164,31 @@ $fontburner_options = array (
 		            "std" => "calibri",
 		            "type" => "text"),
 
-    array(  "name" => "H4 Underline Settings<sup>2</sup>",
+    array(  "name" => "H4 Link Underline Settings<sup>2</sup>",
             "id" => $fontburner_shortname."_h4_underline",
             "type" => "radio",
             "std" => "none",
             "options" => array("underline", "none")),
 
+    array(  "name" => "H4 Link Underline Hover Settings<sup>2</sup>",
+            "id" => $fontburner_shortname."_h4_hover_underline",
+            "type" => "radio",
+            "std" => "underline",
+            "options" => array("underline", "none")),
+
     array(  "name" => "H4 Font Color<sup>3</sup>",
             "id" => $fontburner_shortname."_h4_color",
-            "std" => "999999",
+            "std" => "000000",
+            "type" => "text"),
+
+    array(  "name" => "H4 Link Color<sup>3</sup>",
+            "id" => $fontburner_shortname."_h4_link_color",
+            "std" => "666666",
+            "type" => "text"),
+
+    array(  "name" => "H4 Link Hover Color<sup>3</sup>",
+            "id" => $fontburner_shortname."_h4_hover_color",
+            "std" => "333333",
             "type" => "text"),
 
     array(  "name" => "H4 Alignment<sup>4</sup>",
@@ -256,24 +321,24 @@ pageTracker._trackPageview();
 	    ,css: [
 	      \'.sIFR-root {text-align:'; 
 	echo $fontburner_h1_align;
-	echo '\; color:#';		
+	echo '; color:#';		
 	
 	echo $fontburner_h1_color;
 	echo '	;}'
 	      ,'a {color:#';
-	echo $fontburner_h1_color;
+	echo $fontburner_h1_link_color;
 	echo '	; text-decoration: ';
 	echo $fontburner_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:link {color:#';
-	echo $fontburner_h1_color;
+	echo $fontburner_h1_link_color;
 	echo '	; text-decoration: ';
 	echo $fontburner_h1_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:hover {color:#';
-	echo $fontburner_h1_color;
+	echo $fontburner_h1_hover_color;
 	echo '	; text-decoration: ';
-	echo $fontburner_h1_underline;
+	echo $fontburner_h1_hover_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:visited { color: #';
 	echo $fontburner_h1_color;
@@ -329,24 +394,24 @@ pageTracker._trackPageview();
 	    ,css: [
 	      \'.sIFR-root {text-align:'; 
 	echo $fontburner_h2_align;
-	echo '\; color:#';		
+	echo '; color:#';		
 	
 	echo $fontburner_h2_color;
 	echo '	;}'
 	      ,'a {color:#';
-	echo $fontburner_h2_color;
+	echo $fontburner_h2_link_color;
 	echo '	; text-decoration: ';
-	echo $fontburner_h2_underline;
+	echo $fontburner_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:link {color:#';
-	echo $fontburner_h2_color;
+	echo $fontburner_h2_link_color;
 	echo '	; text-decoration: ';
 	echo $fontburner_h2_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:hover {color:#';
-	echo $fontburner_h2_color;
+	echo $fontburner_h2_hover_color;
 	echo '	; text-decoration: ';
-	echo $fontburner_h2_underline;
+	echo $fontburner_h2_hover_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:visited { color: #';
 	echo $fontburner_h2_color;
@@ -367,6 +432,9 @@ pageTracker._trackPageview();
 	    ,wmode: \'transparent\'
 
 	  });
+
+
+
 
 
 	var ';
@@ -400,24 +468,24 @@ pageTracker._trackPageview();
 	    ,css: [
 	      \'.sIFR-root {text-align:'; 
 	echo $fontburner_h3_align;
-	echo '\; color:#';		
+	echo '; color:#';		
 	
 	echo $fontburner_h3_color;
 	echo '	;}'
 	      ,'a {color:#';
-	echo $fontburner_h3_color;
+	echo $fontburner_h3_link_color;
 	echo '	; text-decoration: ';
-	echo $fontburner_h3_underline;
+	echo $fontburner_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:link {color:#';
-	echo $fontburner_h3_color;
+	echo $fontburner_h3_link_color;
 	echo '	; text-decoration: ';
 	echo $fontburner_h3_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:hover {color:#';
-	echo $fontburner_h3_color;
+	echo $fontburner_h3_hover_color;
 	echo '	; text-decoration: ';
-	echo $fontburner_h3_underline;
+	echo $fontburner_h3_hover_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:visited { color: #';
 	echo $fontburner_h3_color;
@@ -438,6 +506,9 @@ pageTracker._trackPageview();
 	    ,wmode: \'transparent\'
 
 	  });
+
+
+
 
 
 	var ';
@@ -471,24 +542,24 @@ pageTracker._trackPageview();
 	    ,css: [
 	      \'.sIFR-root {text-align:'; 
 	echo $fontburner_h4_align;
-	echo '\; color:#';		
+	echo '; color:#';		
 	
 	echo $fontburner_h4_color;
 	echo '	;}'
 	      ,'a {color:#';
-	echo $fontburner_h4_color;
+	echo $fontburner_h4_link_color;
 	echo '	; text-decoration: ';
-	echo $fontburner_h4_underline;
+	echo $fontburner_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:link {color:#';
-	echo $fontburner_h4_color;
+	echo $fontburner_h4_link_color;
 	echo '	; text-decoration: ';
 	echo $fontburner_h4_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:hover {color:#';
-	echo $fontburner_h4_color;
+	echo $fontburner_h4_hover_color;
 	echo '	; text-decoration: ';
-	echo $fontburner_h4_underline;
+	echo $fontburner_h4_hover_underline;
 	echo '; font-weight:normal; }'
 	      ,'a:visited { color: #';
 	echo $fontburner_h4_color;
@@ -509,6 +580,8 @@ pageTracker._trackPageview();
 	    ,wmode: \'transparent\'
 
 	  });
+
+
 
 
 
@@ -623,11 +696,11 @@ if ($value['type'] == "text") { ?>
 <h2>1. Specify Font</h2>
 <p>This box is where you will enter the font name that you would like to change your headlines to. You MUST choose a font that is available from <a href="http://www.fontburner.com/fonts/" title="Font Burner">Font Burner</a>. The Font Burner Website has over 1000 fonts that you can use on your website for free. When you find a font on Font Burner that you would like to use look at the bottom of the page where it says "Wordpress plugin code" and enter this code in the box above. This code will always be lowercase and will never contain spaces. A typical font code will look like "bitstream_vera_sans_mono_bold".</p>
 
-<h2>2. Underline Settings</h2>
-<p>This is an easy one. If you want your links to be underlined simply check the "underline" checkbox. If you don't want links to be underlined check "none."</p>
+<h2>2. Link Underline Settings</h2>
+<p>This is an easy one. If you want your links to be underlined simply check the "underline" checkbox. If you don't want links to be underlined check "none." The second box sets the "hover" color. That means that when the mouse is over the link you can set whether there is an underline or not.</p>
 
 <h2>3. Font Color</h2>
-<p>This box is where you enter the color that you would like your headlines to be. This is a six digit hexadecimal number. For example, "ffffff" is white and "000000" is black. A google search can help you figure out how hexadecimal colors work if you are unfamiliar with them. You do not need to enter a "#" before this number.</p>
+<p>This box is where you enter the color that you would like your headlines to be. This is a six digit hexadecimal number. For example, "ffffff" is white and "000000" is black. A google search can help you figure out how hexadecimal colors work if you are unfamiliar with them. You do not need to enter a "#" before this number. The "Link Color"" allows you to have your links be a different color than the "normal" headline. The "Link Hover Color" specifies the color that the links will be when the mouse rolls over them.</p>
 
 <h2>4. Alignment</h2>
 <p>By default your headlines will be aligned left, but you can use this dropdown menu to change the alignment to right, left, or center.</p>

@@ -13,6 +13,13 @@ Typography on the web is very limiting. Luckily you have options when it comes t
 
 Changelog:
 
+Version 0.6
+- Added the ability to change the underline setting for "hover"
+- Added the ability to change the color of links
+- Added the ability to change the color of the hover state of links
+- Updated the help section
+- fixed mistakes
+
 Version 0.5
 - This is the first major update to the Font Burner Plugin. New features include:
 1. The ability to change font color for H1, H2, H3 and H4 independently
