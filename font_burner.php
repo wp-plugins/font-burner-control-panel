@@ -2,7 +2,7 @@
 /* 
 Plugin Name: Font Burner
 Plugin URI: http://www.fontburner.com/the-font-burner-wordpress-plugin/
-Version: v0.7
+Version: v0.8
 Author: <a href="http://adrian3.com/">Adrian3</a>
 Description: The Font Burner Plugin allows you to easily add <a href="http://fontburner.com/">Font Burner</a> Fonts to your site through Wordpress.
 
@@ -342,8 +342,8 @@ echo '<!-- sIFR fonts delivered by www.fontburner.com -->
 	'fntburnr_h1_color'=>'666666',
 	'fntburnr_h1_link_color'=>'000000',
 	'fntburnr_h1_hover_color'=>'333333',	
-	'fntburnr_h1_underline'=>'No Underline',
-	'fntburnr_h1_hover_underline'=>'Underline',
+	'fntburnr_h1_underline'=>'No underline',
+	'fntburnr_h1_hover_underline'=>'underline',
 
 	'fntburnr_h2_on_off'=>'on',
 	'fntburnr_h2_font'=>'fontin_sans_bold',
@@ -351,8 +351,8 @@ echo '<!-- sIFR fonts delivered by www.fontburner.com -->
 	'fntburnr_h2_color'=>'666666',
 	'fntburnr_h2_link_color'=>'000000',
 	'fntburnr_h2_hover_color'=>'333333',	
-	'fntburnr_h2_underline'=>'No Underline',
-	'fntburnr_h2_hover_underline'=>'Underline',
+	'fntburnr_h2_underline'=>'No underline',
+	'fntburnr_h2_hover_underline'=>'underline',
 
 	'fntburnr_h3_on_off'=>'on',
 	'fntburnr_h3_font'=>'andron_scriptor_web',
@@ -360,8 +360,8 @@ echo '<!-- sIFR fonts delivered by www.fontburner.com -->
 	'fntburnr_h3_color'=>'666666',
 	'fntburnr_h3_link_color'=>'000000',
 	'fntburnr_h3_hover_color'=>'333333',	
-	'fntburnr_h3_underline'=>'No Underline',
-	'fntburnr_h3_hover_underline'=>'Underline',
+	'fntburnr_h3_underline'=>'No underline',
+	'fntburnr_h3_hover_underline'=>'underline',
 
 	'fntburnr_h4_on_off'=>'on',
 	'fntburnr_h4_font'=>'museo_300',
@@ -369,8 +369,8 @@ echo '<!-- sIFR fonts delivered by www.fontburner.com -->
 	'fntburnr_h4_color'=>'666666',
 	'fntburnr_h4_link_color'=>'000000',
 	'fntburnr_h4_hover_color'=>'333333',	
-	'fntburnr_h4_underline'=>'No Underline',
-	'fntburnr_h4_hover_underline'=>'Underline',
+	'fntburnr_h4_underline'=>'No underline',
+	'fntburnr_h4_hover_underline'=>'underline',
 
 	'fntburnr_css'=>'line-height: 1.2em;
 	  font-size: 16px;
@@ -532,21 +532,21 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
 
 
                 <p>
-                  <?php _e('H1 Link Underline<sup>5</sup>:', $this->localizationDomain); ?>
+                  <?php _e('H1 Link underline<sup>5</sup>:', $this->localizationDomain); ?>
                   <select name="fntburnr_h1_underline" id="fntburnr_h1_underline">
                   <option selected="selected"><?php echo $this->options['fntburnr_h1_underline'] ;?></option>
-                  <option>Underline</option>
-                  <option>No Underline</option>
+                  <option>underline</option>
+                  <option>No underline</option>
                  </select>
                 </p><hr />
 
 
                 <p>
-                  <?php _e('H1 Hover Underline<sup>5</sup>:', $this->localizationDomain); ?>
+                  <?php _e('H1 Hover underline<sup>5</sup>:', $this->localizationDomain); ?>
                   <select name="fntburnr_h1_hover_underline" id="fntburnr_h1_hover_underline">
                   <option selected="selected"><?php echo $this->options['fntburnr_h1_hover_underline'] ;?></option>
-                  <option>Underline</option>
-                  <option>No Underline</option>
+                  <option>underline</option>
+                  <option>No underline</option>
                  </select>
                 </p><hr />
 
@@ -599,21 +599,21 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
 
 
                 <p>
-                  <?php _e('h2 Link Underline<sup>5</sup>:', $this->localizationDomain); ?>
+                  <?php _e('h2 Link underline<sup>5</sup>:', $this->localizationDomain); ?>
                   <select name="fntburnr_h2_underline" id="fntburnr_h2_underline">
                   <option selected="selected"><?php echo $this->options['fntburnr_h2_underline'] ;?></option>
-                  <option>Underline</option>
-                  <option>No Underline</option>
+                  <option>underline</option>
+                  <option>No underline</option>
                  </select>
                 </p><hr />
 
 
                 <p>
-                  <?php _e('h2 Hover Underline<sup>5</sup>:', $this->localizationDomain); ?>
+                  <?php _e('h2 Hover underline<sup>5</sup>:', $this->localizationDomain); ?>
                   <select name="fntburnr_h2_hover_underline" id="fntburnr_h2_hover_underline">
                   <option selected="selected"><?php echo $this->options['fntburnr_h2_hover_underline'] ;?></option>
-                  <option>Underline</option>
-                  <option>No Underline</option>
+                  <option>underline</option>
+                  <option>No underline</option>
                  </select>
                 </p><hr />
 
@@ -667,21 +667,21 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
 
 
                 <p>
-                  <?php _e('h3 Link Underline<sup>5</sup>:', $this->localizationDomain); ?>
+                  <?php _e('h3 Link underline<sup>5</sup>:', $this->localizationDomain); ?>
                   <select name="fntburnr_h3_underline" id="fntburnr_h3_underline">
                   <option selected="selected"><?php echo $this->options['fntburnr_h3_underline'] ;?></option>
-                  <option>Underline</option>
-                  <option>No Underline</option>
+                  <option>underline</option>
+                  <option>No underline</option>
                  </select>
                 </p><hr />
 
 
                 <p>
-                  <?php _e('h3 Hover Underline<sup>5</sup>:', $this->localizationDomain); ?>
+                  <?php _e('h3 Hover underline<sup>5</sup>:', $this->localizationDomain); ?>
                   <select name="fntburnr_h3_hover_underline" id="fntburnr_h3_hover_underline">
                   <option selected="selected"><?php echo $this->options['fntburnr_h3_hover_underline'] ;?></option>
-                  <option>Underline</option>
-                  <option>No Underline</option>
+                  <option>underline</option>
+                  <option>No underline</option>
                  </select>
                 </p><hr />
 
@@ -735,21 +735,21 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
 
 
                 <p>
-                  <?php _e('h4 Link Underline<sup>5</sup>:', $this->localizationDomain); ?>
+                  <?php _e('h4 Link underline<sup>5</sup>:', $this->localizationDomain); ?>
                   <select name="fntburnr_h4_underline" id="fntburnr_h4_underline">
                   <option selected="selected"><?php echo $this->options['fntburnr_h4_underline'] ;?></option>
-                  <option>Underline</option>
-                  <option>No Underline</option>
+                  <option>underline</option>
+                  <option>No underline</option>
                  </select>
                 </p><hr />
 
 
                 <p>
-                  <?php _e('h4 Hover Underline<sup>5</sup>:', $this->localizationDomain); ?>
+                  <?php _e('h4 Hover underline<sup>5</sup>:', $this->localizationDomain); ?>
                   <select name="fntburnr_h4_hover_underline" id="fntburnr_h4_hover_underline">
                   <option selected="selected"><?php echo $this->options['fntburnr_h4_hover_underline'] ;?></option>
-                  <option>Underline</option>
-                  <option>No Underline</option>
+                  <option>underline</option>
+                  <option>No underline</option>
                  </select>
                 </p><hr />
 

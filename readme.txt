@@ -13,6 +13,9 @@ Typography on the web is very limiting. Luckily you have options when it comes t
 
 Changelog:
 
+Version 0.8
+- Fixed underline problem
+
 Version 0.7
 - Much of the code in this version has been rewritten with the goal of reducing the code footprint. 
 - The code is now more efficient and eliminates unnecessary code when options are set to "off"
