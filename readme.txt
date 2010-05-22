@@ -13,6 +13,9 @@ Typography on the web is very limiting. Luckily you have options when it comes t
 
 Changelog:
 
+Version 1.0
+- Version 1 introduces a big shift in how Font Burner functions. Rather than relying on the Font Burner servers which have gotten slow due to the high traffic from the popularity of this plugin, you now host the font files in your plugin folder. Be sure to back up your old version of this plugin before upgrading. 
+
 Version 0.8
 - Fixed underline problem
 

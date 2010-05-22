@@ -2,7 +2,7 @@
 /* 
 Plugin Name: Font Burner
 Plugin URI: http://www.fontburner.com/the-font-burner-wordpress-plugin/
-Version: v0.8
+Version: v1.0
 Author: <a href="http://adrian3.com/">Adrian3</a>
 Description: The Font Burner Plugin allows you to easily add <a href="http://fontburner.com/">Font Burner</a> Fonts to your site through Wordpress.
 
@@ -116,22 +116,24 @@ echo '
 function addfntburnrh1() {
          if ($this->options['fntburnr_h1_on_off'] == 'on') {
 echo '<script type="text/javascript">	var ';
-	echo $this->options['fntburnr_h1_font'];
-	echo '= { src: \'http://www.fontburner.com/flash/';
-	echo $this->options['fntburnr_h1_font'];
+	echo $this->options['fntburnr_h1_font_v2'];
+	echo '= { src: \'';
+	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/';
+	echo $this->options['fntburnr_h1_font_v2'];
 	echo '.swf\' };  sIFR.prefetch(';
-	echo $this->options['fntburnr_h1_font'];
+	echo $this->options['fntburnr_h1_font_v2'];
 	echo '); sIFR.delayCSS  = true; sIFR.activate(';
-	echo $this->options['fntburnr_h1_font'];
+	echo $this->options['fntburnr_h1_font_v2'];
 	echo '); sIFR.replace(';
-	echo $this->options['fntburnr_h1_font'];
+	echo $this->options['fntburnr_h1_font_v2'];
 	echo ', { selector: \'h1, ';
-	echo $this->options['fntburnr_h1_font'];
+	echo $this->options['fntburnr_h1_font_v2'];
 	echo ', ';
 	echo ' .';
-	echo $this->options['fntburnr_h1_font'];
+	echo $this->options['fntburnr_h1_font_v2'];
 	echo ', #';
-	echo $this->options['fntburnr_h1_font'];
+	echo $this->options['fntburnr_h1_font_v2'];
 	echo '\' , css: [ \'.sIFR-root {text-align:'; 
 	echo $this->options['fntburnr_h1_align'];
 	echo '; color:#';		
@@ -164,22 +166,24 @@ function addfntburnrh2() {
 
 	echo '
 <script type="text/javascript">	var ';
-	echo $this->options['fntburnr_h2_font'];
-	echo '= { src: \'http://www.fontburner.com/flash/';
-	echo $this->options['fntburnr_h2_font'];
+	echo $this->options['fntburnr_h2_font_v2'];
+	echo '= { src: \'';
+	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/';
+	echo $this->options['fntburnr_h2_font_v2'];
 	echo '.swf\' };  sIFR.prefetch(';
-	echo $this->options['fntburnr_h2_font'];
+	echo $this->options['fntburnr_h2_font_v2'];
 	echo '); sIFR.delayCSS  = true; sIFR.activate(';
-	echo $this->options['fntburnr_h2_font'];
+	echo $this->options['fntburnr_h2_font_v2'];
 	echo '); sIFR.replace(';
-	echo $this->options['fntburnr_h2_font'];
+	echo $this->options['fntburnr_h2_font_v2'];
 	echo ', { selector: \'h2, ';
-	echo $this->options['fntburnr_h2_font'];
+	echo $this->options['fntburnr_h2_font_v2'];
 	echo ', ';
 	echo ' .';
-	echo $this->options['fntburnr_h2_font'];
+	echo $this->options['fntburnr_h2_font_v2'];
 	echo ', #';
-	echo $this->options['fntburnr_h2_font'];
+	echo $this->options['fntburnr_h2_font_v2'];
 	echo '\' , css: [ \'.sIFR-root {text-align:'; 
 	echo $this->options['fntburnr_h2_align'];
 	echo '; color:#';		
@@ -212,22 +216,24 @@ function addfntburnrh3() {
 
 	echo ' 
 <script type="text/javascript">	var ';
-	echo $this->options['fntburnr_h3_font'];
-	echo '= { src: \'http://www.fontburner.com/flash/';
-	echo $this->options['fntburnr_h3_font'];
+	echo $this->options['fntburnr_h3_font_v2'];
+	echo '= { src: \'';
+	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/';
+	echo $this->options['fntburnr_h3_font_v2'];
 	echo '.swf\' };  sIFR.prefetch(';
-	echo $this->options['fntburnr_h3_font'];
+	echo $this->options['fntburnr_h3_font_v2'];
 	echo '); sIFR.delayCSS  = true; sIFR.activate(';
-	echo $this->options['fntburnr_h3_font'];
+	echo $this->options['fntburnr_h3_font_v2'];
 	echo '); sIFR.replace(';
-	echo $this->options['fntburnr_h3_font'];
+	echo $this->options['fntburnr_h3_font_v2'];
 	echo ', { selector: \'h3, ';
-	echo $this->options['fntburnr_h3_font'];
+	echo $this->options['fntburnr_h3_font_v2'];
 	echo ', ';
 	echo ' .';
-	echo $this->options['fntburnr_h3_font'];
+	echo $this->options['fntburnr_h3_font_v2'];
 	echo ', #';
-	echo $this->options['fntburnr_h3_font'];
+	echo $this->options['fntburnr_h3_font_v2'];
 	echo '\' , css: [ \'.sIFR-root {text-align:'; 
 	echo $this->options['fntburnr_h3_align'];
 	echo '; color:#';		
@@ -260,22 +266,24 @@ function addfntburnrh4() {
 
 	echo ' 
 <script type="text/javascript">	var ';
-	echo $this->options['fntburnr_h4_font'];
-	echo '= { src: \'http://www.fontburner.com/flash/';
-	echo $this->options['fntburnr_h4_font'];
+	echo $this->options['fntburnr_h4_font_v2'];
+	echo '= { src: \'';
+	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/';
+	echo $this->options['fntburnr_h4_font_v2'];
 	echo '.swf\' };  sIFR.prefetch(';
-	echo $this->options['fntburnr_h4_font'];
+	echo $this->options['fntburnr_h4_font_v2'];
 	echo '); sIFR.delayCSS  = true; sIFR.activate(';
-	echo $this->options['fntburnr_h4_font'];
+	echo $this->options['fntburnr_h4_font_v2'];
 	echo '); sIFR.replace(';
-	echo $this->options['fntburnr_h4_font'];
+	echo $this->options['fntburnr_h4_font_v2'];
 	echo ', { selector: \'h4, ';
-	echo $this->options['fntburnr_h4_font'];
+	echo $this->options['fntburnr_h4_font_v2'];
 	echo ', ';
 	echo ' .';
-	echo $this->options['fntburnr_h4_font'];
+	echo $this->options['fntburnr_h4_font_v2'];
 	echo ', #';
-	echo $this->options['fntburnr_h4_font'];
+	echo $this->options['fntburnr_h4_font_v2'];
 	echo '\' , css: [ \'.sIFR-root {text-align:'; 
 	echo $this->options['fntburnr_h4_align'];
 	echo '; color:#';		
@@ -372,20 +380,33 @@ echo '<!-- sIFR fonts delivered by www.fontburner.com -->
 	'fntburnr_h4_underline'=>'No underline',
 	'fntburnr_h4_hover_underline'=>'underline',
 
+	'fntburnr_h1_font_v2'=>'museo_300',
+	'fntburnr_h2_font_v2'=>'museo_300',
+	'fntburnr_h3_font_v2'=>'museo_300',
+	'fntburnr_h4_font_v2'=>'museo_300',
+
 	'fntburnr_css'=>'line-height: 1.2em;
 	  font-size: 16px;
+	}
+.sIFR-active h1 {
+	  line-height: 1.2em;
+	  font-size: 15px;
+	visibility: hidden;
 	}
 .sIFR-active h2 {
 	  line-height: 1.2em;
 	  font-size: 15px;
+	visibility: hidden;
 	}
 .sIFR-active h3 {
 	  line-height: 1.2em;
 	  font-size: 14px;
+	visibility: hidden;
 	}
 .sIFR-active h4 {
 	  line-height: 1.2em;
-	  font-size: 13px;'
+	  font-size: 13px;
+	visibility: hidden;'
 
 
 			);
@@ -469,6 +490,11 @@ $this->options['fntburnr_h4_hover_color'] = $_POST['fntburnr_h4_hover_color'];
 $this->options['fntburnr_h4_underline'] = $_POST['fntburnr_h4_underline'];
 $this->options['fntburnr_h4_hover_underline'] = $_POST['fntburnr_h4_hover_underline'];
 
+$this->options['fntburnr_h1_font_v2'] = $_POST['fntburnr_h1_font_v2'];
+$this->options['fntburnr_h2_font_v2'] = $_POST['fntburnr_h2_font_v2'];
+$this->options['fntburnr_h3_font_v2'] = $_POST['fntburnr_h3_font_v2'];
+$this->options['fntburnr_h4_font_v2'] = $_POST['fntburnr_h4_font_v2'];
+
 $this->options['fntburnr_css_on_off'] = $_POST['fntburnr_css_on_off'];
 $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
                                         
@@ -481,10 +507,59 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
                 <div class="wrap">
 <h1>Font Burner Control Panel</h1>
 <p><a href="http://www.fontburner.com/"><img src="http://www.fontburner.com/images/font_burner_badge4.gif" width="300" height="50" vspace="25" align ="right" /></a>This control panel gives you the ability to control how your Font Burner fonts are displayed. For more information about this plugin, please visit the <a href="http://www.fontburner.com/the-font-burner-wordpress-plugin/" title="Font Burner plugin page">Font Burner plugin page</a>. Please <a href="http://www.fontburner.com/forum/" title="visit the Font Burner Forum">visit the Font Burner forum</a> with any bugs, suggestions, or questions. Thanks for using Font Burner, and I hope you like this plugin. <a href="http://adrian3.com/" title="-Adrian 3">-Adrian3</a></p>
+ 
+
+<?php
+if ($this->options['fntburnr_h1_font'] != 'cuprum') {
+echo '<h2>IMPORTANT: Upgrade Instructions</h2>
+<p>It looks like you just upgraded your Font Burner Plugin. Thanks! First, you need to download the fonts you were using in the previous version and copy them into the "fonts" folder. This version of the plugin is significantly different from previous versions because it requires you to "self host" your fonts. This not only increases the speed of your pages because you aren\'t relying on the Font Burner servers, but it also "future-proofs" your site if Font Burner were to cease to exist. </p>
+
+<p>If you have upgraded to this version, you can download the fonts you were using previously at the links below. After you have unzipped the download, upload the .swf file into the "fonts" folder located at ';
+echo get_bloginfo('wpurl'); 
+echo '/wp-content/plugins/font-burner-control-panel/fonts/. Once your fonts are uploaded they will appear in the dropdowns below.</p>
+';
+
+echo '<p><a href="http://fontburner.com/flash/';
+echo $this->options['fntburnr_h1_font'] ;
+echo '.swf.zip">Click here to download the ';
+echo $this->options['fntburnr_h1_font'] ;
+echo ' swf font file.</a></p>';
+}
+
+if ($this->options['fntburnr_h2_font'] != 'fontin_sans_bold') {
+
+echo '<p><a href="http://fontburner.com/flash/';
+echo $this->options['fntburnr_h2_font'] ;
+echo '.swf.zip">Click here to download the ';
+echo $this->options['fntburnr_h2_font'] ;
+echo ' swf font file.</a></p>';
+}
+
+if ($this->options['fntburnr_h3_font'] != 'andron_scriptor_web') {
+
+echo '<p><a href="http://fontburner.com/flash/';
+echo $this->options['fntburnr_h3_font'] ;
+echo '.swf.zip">Click here to download the ';
+echo $this->options['fntburnr_h3_font'] ;
+echo ' swf font file.</a></p>';
+}
+
+if ($this->options['fntburnr_h4_font'] != 'museo_300') {
+
+echo '<p><a href="http://fontburner.com/flash/';
+echo $this->options['fntburnr_h4_font'] ;
+echo '.swf.zip">Click here to download the ';
+echo $this->options['fntburnr_h4_font'] ;
+echo ' swf font file.</a></p>';
+}
+ ?>
+
+
 <hr><br /><br />
 <h2>Customize your Font Burner settings:</h2>
                 <form method="post" id="fntburnr_options">
                 <?php wp_nonce_field('fntburnr-update-options'); ?>
+
 
 <h2>H1 Customization</h2>
                 <p>
@@ -497,11 +572,55 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
                 </p><hr />
 
 
+<div style="visibility: hidden; display:none">
+<p>
+<?php 
+ 
+_e('Specify Font:<sup>3</sup>', $this->localizationDomain);
+
+ ?>
+<textarea name="fntburnr_h1_font" cols="25" rows="1" id="fntburnr_h1_font">
+<?php 
+
+echo $this->options['fntburnr_h1_font'] ;
+
+?>
+</textarea>
+</p><hr />
+</div>
 
                 <p>
-                <?php _e('Specify Font:<sup>3</sup>', $this->localizationDomain); ?>
-                <textarea name="fntburnr_h1_font" cols="25" rows="1" id="fntburnr_h1_font"><?php echo $this->options['fntburnr_h1_font'] ;?></textarea>
-                </p><hr />
+                <?php _e('Specify Font:<sup>2</sup>', $this->localizationDomain); ?>
+
+
+<select name="fntburnr_h1_font_v2" id="fntburnr_h1_font_v2">
+<option selected="selected"><?php echo $this->options['fntburnr_h1_font_v2'] ;?></option>
+<?php 
+// The following will list all the files (in this case swf font files) and add them to the dropdown menu 
+// open this directory 
+$myDirectory = opendir("../wp-content/plugins/font-burner-control-panel/fonts");
+// get each entry
+while($entryName = readdir($myDirectory)) {
+$dirArray[] = substr($entryName, 0, -4); }
+// close directory
+closedir($myDirectory);
+//	count elements in array
+$indexCount	= count($dirArray);
+// sort 'em
+sort($dirArray);
+// loop through the array of files and print them all
+for($index=0; $index < $indexCount; $index++) {
+        if (substr("$dirArray[$index]", 0, 1) != "."){ // don't list hidden files
+		print("<option>$dirArray[$index]</option>
+"); }} ?>
+</select>
+
+                </p>
+*NEW: You can add fonts to the dropdown menu above by adding Font Burner fonts into the "fonts" folder located at <?php 	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/'; ?>. See #2 below in the help section for more details. 
+
+<hr />
+
 
                 <p>
                   <?php _e('H1 Alignment<sup>2</sup>:', $this->localizationDomain); ?>
@@ -562,12 +681,42 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
                  </select>
                 </p><hr />
 
+<div style="visibility: hidden; display:none">
+<p>
+<?php 
+ 
+_e('Specify Font:<sup>3</sup>', $this->localizationDomain);
+
+ ?>
+<textarea name="fntburnr_h2_font" cols="25" rows="1" id="fntburnr_h2_font">
+<?php 
+
+echo $this->options['fntburnr_h2_font'] ;
+
+?>
+</textarea>
+</p><hr />
+</div>
 
                 <p>
-                <?php _e('Specify Font:<sup>3</sup>', $this->localizationDomain); ?>
-                <textarea name="fntburnr_h2_font" cols="25" rows="1" id="fntburnr_h2_font"><?php echo $this->options['fntburnr_h2_font'] ;?></textarea>
-                </p><hr />
+                <?php _e('Specify Font:<sup>2</sup>', $this->localizationDomain); ?>
 
+
+<select name="fntburnr_h2_font_v2" id="fntburnr_h2_font_v2">
+<option selected="selected"><?php echo $this->options['fntburnr_h2_font_v2'] ;?></option>
+<?php 
+
+for($index=0; $index < $indexCount; $index++) {
+        if (substr("$dirArray[$index]", 0, 1) != "."){ // don't list hidden files
+		print("<option>$dirArray[$index]</option>
+"); }} ?>
+</select>
+
+                </p>
+*NEW: You can add fonts to the dropdown menu above by adding Font Burner fonts into the "fonts" folder located at <?php 	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/'; ?>. See #2 below in the help section for more details. 
+
+<hr />
 
 
                 <p>
@@ -630,11 +779,42 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
                  </select>
                 </p><hr />
 
+<div style="visibility: hidden; display:none">
+<p>
+<?php 
+ 
+_e('Specify Font:<sup>3</sup>', $this->localizationDomain);
+
+ ?>
+<textarea name="fntburnr_h3_font" cols="25" rows="1" id="fntburnr_h3_font">
+<?php 
+
+echo $this->options['fntburnr_h3_font'] ;
+
+?>
+</textarea>
+</p><hr />
+</div>
 
                 <p>
-                <?php _e('Specify Font:<sup>3</sup>', $this->localizationDomain); ?>
-                <textarea name="fntburnr_h3_font" cols="25" rows="1" id="fntburnr_h3_font"><?php echo $this->options['fntburnr_h3_font'] ;?></textarea>
-                </p><hr />
+                <?php _e('Specify Font:<sup>2</sup>', $this->localizationDomain); ?>
+
+
+<select name="fntburnr_h3_font_v2" id="fntburnr_h3_font_v2">
+<option selected="selected"><?php echo $this->options['fntburnr_h3_font_v2'] ;?></option>
+<?php 
+
+for($index=0; $index < $indexCount; $index++) {
+        if (substr("$dirArray[$index]", 0, 1) != "."){ // don't list hidden files
+		print("<option>$dirArray[$index]</option>
+"); }} ?>
+</select>
+
+                </p>
+*NEW: You can add fonts to the dropdown menu above by adding Font Burner fonts into the "fonts" folder located at <?php 	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/'; ?>. See #2 below in the help section for more details. 
+
+<hr />
 
 
                 <p>
@@ -697,11 +877,42 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
                  </select>
                 </p><hr />
 
+ 
+<div style="visibility: hidden; display:none">
+<p>
+<?php 
+ 
+_e('Specify Font:<sup>3</sup>', $this->localizationDomain);
 
+ ?>
+<textarea name="fntburnr_h4_font" cols="25" rows="1" id="fntburnr_h4_font">
+<?php 
+
+echo $this->options['fntburnr_h4_font'] ;
+
+?>
+</textarea>
+</p><hr />
+</div>
                 <p>
-                <?php _e('Specify Font:<sup>3</sup>', $this->localizationDomain); ?>
-                <textarea name="fntburnr_h4_font" cols="25" rows="1" id="fntburnr_h4_font"><?php echo $this->options['fntburnr_h4_font'] ;?></textarea>
-                </p><hr />
+                <?php _e('Specify Font:<sup>2</sup>', $this->localizationDomain); ?>
+
+
+<select name="fntburnr_h4_font_v2" id="fntburnr_h4_font_v2">
+<option selected="selected"><?php echo $this->options['fntburnr_h4_font_v2'] ;?></option>
+<?php 
+
+for($index=0; $index < $indexCount; $index++) {
+        if (substr("$dirArray[$index]", 0, 1) != "."){ // don't list hidden files
+		print("<option>$dirArray[$index]</option>
+"); }} ?>
+</select>
+
+                </p>
+*NEW: You can add fonts to the dropdown menu above by adding Font Burner fonts into the "fonts" folder located at <?php 	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/'; ?>. See #2 below in the help section for more details. 
+
+<hr />
 
 
 
@@ -770,13 +981,19 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
                 <textarea name="fntburnr_css" cols="45" rows="10" id="fntburnr_css"><?php echo $this->options['fntburnr_css'] ;?></textarea>
         		</p>
 
+
+                <hr />
+
+
 <p><input type="submit" name="fntburnr_save" value="Save" /></p>
 
 <h1>Help</h1>
 <h2>1. Turn On/Off</h2>
 <p>If you do not want to use Font Burner on some of your headlines this is where you can turn it off. This can be handy if you only want to use Font Burner on certain H tags. To turn Font Burner off for a certain Headline select "off" from this dropdown. </p>
 <h2>2. Specify Font</h2>
-<p>This box is where you will enter the font name that you would like to change your headlines to. You MUST choose a font that is available from <a href="http://www.fontburner.com/fonts/" title="Font Burner">Font Burner</a>. The Font Burner Website has over 1000 fonts that you can use on your website for free. When you find a font on Font Burner that you would like to use look at the bottom of the page where it says "Wordpress plugin code" and enter this code in the box above. This code will always be lowercase and will never contain spaces. A typical font code will look like "bitstream_vera_sans_mono_bold".</p>
+<p>This box is where you will select the font name that you would like to change your headlines to. The fonts listed in the dropdown are some of the most popular Font Burner fonts. You can add to this list by adding .swf font files into the "fonts" folder located at <?php 	echo get_bloginfo('wpurl'); 
+	echo '/wp-content/plugins/font-burner-control-panel/fonts/'; ?>. Where do you get these files? Well, you need to go to <a href="http://www.fontburner.com/fonts/" title="free fonts">www.fontburner.com/fonts</a> and download them. The Font Burner Website has over 1000 fonts that you can download and use on your website for free. Note: the files that you download must be unzipped. This will give you a .swf file, which is what you need to upload. After uploading the font file it will appear in the dropdown menu above.
+</p>
 
 <h2>3. Alignment</h2>
 <p>This option allows you to change the alignment to right, left, or center.</p>
@@ -790,18 +1007,22 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
 <p>.sIFR-active h1 {<br />
 line-height: 1.2em;<br />
 font-size: 16px;<br />
+visibility: hidden;<br />
 }<br />
 .sIFR-active h2 {<br />
 line-height: 1.2em;<br />
 font-size: 15px;<br />
+visibility: hidden;<br />
 }<br />
 .sIFR-active h3 {<br />
 line-height: 1.2em;<br />
 font-size: 14px;<br />
+visibility: hidden;<br />
 }<br />
 .sIFR-active h4 {<br />
 line-height: 1.2em;<br />
 font-size: 13px;<br />
+visibility: hidden;<br />
 }</p>
 <p>Use that as a starting point and adjust accordingly.</p>
 
