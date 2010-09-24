@@ -506,7 +506,7 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
 ?>                                   
                 <div class="wrap">
 <h1>Font Burner Control Panel</h1>
-<p><a href="http://www.fontburner.com/"><img src="http://www.fontburner.com/images/font_burner_badge4.gif" width="300" height="50" vspace="25" align ="right" /></a>This control panel gives you the ability to control how your Font Burner fonts are displayed. For more information about this plugin, please visit the <a href="http://www.fontburner.com/the-font-burner-wordpress-plugin/" title="Font Burner plugin page">Font Burner plugin page</a>. Please <a href="http://www.fontburner.com/forum/" title="visit the Font Burner Forum">visit the Font Burner forum</a> with any bugs, suggestions, or questions. Thanks for using Font Burner, and I hope you like this plugin. <a href="http://adrian3.com/" title="-Adrian 3">-Adrian3</a></p>
+<p><a href="http://www.fontburner.com/"><img src="../wp-content/plugins/font-burner-control-panel/font_burner_badge4.gif" width="300" height="50" vspace="25" align ="right" /></a>This control panel gives you the ability to control how your Font Burner fonts are displayed. For more information about this plugin, please visit the <a href="http://www.fontburner.com/the-font-burner-wordpress-plugin/" title="Font Burner plugin page">Font Burner plugin page</a>. Please <a href="http://www.fontburner.com/forum/" title="visit the Font Burner Forum">visit the Font Burner forum</a> with any bugs, suggestions, or questions. Thanks for using Font Burner, and I hope you like this plugin. <a href="http://adrian3.com/" title="-Adrian 3">-Adrian3</a></p>
  
 
 <?php
