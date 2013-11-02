@@ -511,7 +511,9 @@ $this->options['fntburnr_css'] = $_POST['fntburnr_css'];
 
 <?php
 if ($this->options['fntburnr_h1_font'] != 'cuprum') {
-echo '<h2>IMPORTANT: Upgrade Instructions</h2>
+echo '<h1>IMPORTANT: COMPATIBILITY NOTICE</h2>
+<p>While this plugin may still work, there are better options for adding fonts to your website. I recommend <a href="http://www.google.com/fonts/">WP Google Fonts</a> or one of the TypeKit plugins. Font Burner is no longer in active development and should not be considered future friendly.</p>
+<h2>Upgrade Instructions</h2>
 <p>It looks like you just upgraded your Font Burner Plugin. Thanks! First, you need to download the fonts you were using in the previous version and copy them into the "fonts" folder. This version of the plugin is significantly different from previous versions because it requires you to "self host" your fonts. This not only increases the speed of your pages because you aren\'t relying on the Font Burner servers, but it also "future-proofs" your site if Font Burner were to cease to exist. </p>
 
 <p>If you have upgraded to this version, you can download the fonts you were using previously at the links below. After you have unzipped the download, upload the .swf file into the "fonts" folder located at ';
